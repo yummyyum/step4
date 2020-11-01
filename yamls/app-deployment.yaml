@@ -22,4 +22,10 @@ spec:
           mountPath: /etc/ccts/config.yaml
         ports:
         - containerPort: 5000
-
+        volumeMounts:
+        - name: config
+          mountPath: /etc/ccts/config.yaml
+      volumes:
+      - name: config
+        configMap:
+          name: app-config
