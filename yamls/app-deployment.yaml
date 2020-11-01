@@ -17,14 +17,11 @@ spec:
       containers:
       - name: app
         image: step4app/service:3
-        volumeMounts:
-        - name: app-config
-          mountPath: /etc/ccts/config.yaml
         ports:
         - containerPort: 5000
         volumeMounts:
         - name: config
-          mountPath: /etc/ccts/config.yaml
+          mountPath: /etc/ccts/config.yml
       volumes:
       - name: config
         configMap:
