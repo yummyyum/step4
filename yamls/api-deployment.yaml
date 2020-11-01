@@ -17,9 +17,6 @@ spec:
       containers:
       - name: api
         image: step4api/service:3
-        volumeMounts:
-        - name: api-config
-          mountPath: /etc/ccts/config.yaml
         ports:
         - containerPort: 5001
 
